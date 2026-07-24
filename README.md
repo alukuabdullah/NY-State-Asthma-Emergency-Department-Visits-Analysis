@@ -63,7 +63,7 @@ ORDER BY AVG(crude_rate) DESC;
 | Schenectady | 262 |
 | Orange | 259 |
 
-The Bronx carries the highest burden at 1,021 per 10,000 — nearly 
+The Bronx carries the highest burden at 1,021 per 10,000  -  nearly 
 double Kings County (513) and New York County (491). The 
 concentration of burden in NYC boroughs suggests urban environmental 
 and socioeconomic factors are significant drivers.
@@ -89,7 +89,7 @@ ORDER BY AVG(crude_rate) DESC;
 | 25-64 | 231 |
 | 65+ | 131 |
 
-Children aged 0–4 have the highest rate at 676 per 10,000 — more 
+Children aged 0–4 have the highest rate at 676 per 10,000  -  more 
 than 5x higher than seniors (65+) at 131. The rate drops 
 significantly after age 5 and continues declining through 
 adulthood, making early childhood the critical intervention window.
@@ -138,7 +138,7 @@ ORDER BY CAST(subgroup_cat1 AS INT) ASC;
 May and October show the highest ED visit rates, consistent with 
 spring allergen season and autumn respiratory infection patterns. 
 July and August are the lowest months. This has clear implications 
-for healthcare resource planning — staffing and medication 
+for healthcare resource planning  -  staffing and medication 
 availability should be scaled ahead of these peak months.
 
 **Q4: Year-over-Year Statewide Trend**
@@ -169,16 +169,16 @@ ORDER BY year ASC;
 **Answer (selected years):**
 | year | avg_crude_rate | yoy_growth_pct |
 |---|---|---|
-| 2005 | 91 | — |
-| 2010 | 94 | — |
-| 2012 | 101.23 | — |
-| 2015 | 97 | — |
-| 2017 | 85 | — |
+| 2005 | 91 |  -  |
+| 2010 | 94 |  -  |
+| 2012 | 101.23 |  -  |
+| 2015 | 97 |  -  |
+| 2017 | 85 |  -  |
 | 2019 | 67.01 | -12.31 |
 
 Rates were relatively stable 2005–2012, peaking at 101.23 per 10,000 
 in 2012. From 2013 onwards rates declined consistently, reaching 
-67.01 by 2019 — a 34% reduction from peak. The steepest single-year 
+67.01 by 2019  -  a 34% reduction from peak. The steepest single-year 
 decline was 2019 at -12.31% year-over-year. The acceleration of 
 improvement from 2016 onwards coincides with the full implementation 
 of the Affordable Care Act.
@@ -228,22 +228,22 @@ JOIN rate_early ON rate_late.county = rate_early.county
 ORDER BY improvement_pct DESC;
 ```
 **Answer (top and bottom of the list):**
-| county | rate_2005_2007 | rate_2017_2019 | improvement_pct |
-|---|---|---|---|
-| Greene | — | — | 68% |
-| Clinton | — | — | 67% |
-| Yates | — | — | 60% |
-| Montgomery | — | — | +1.4% (worse) |
-| Hamilton | — | — | +16.3% (worse) |
-| Cortland | 36 | 62 | +69.8% (worse) |
+| county | improvement_pct |
+|---|---|
+| Greene | 68% (best improvement) |
+| Clinton | 67% |
+| Yates | 60% |
+| Montgomery | +1.4% (worse) |
+| Hamilton | +16.3% (worse) |
+| Cortland | +69.8% (worse - rate rose from 36 to 62) |
 
 Note: individual counties only have rolling 3-year data, not single 
-years — earliest available range is 2005-2007.
+years  -  earliest available range is 2005-2007.
 
 Greene County showed the greatest percentage improvement at 68%, 
 followed by Clinton at 67% and Yates at 60%. However three counties 
 deteriorated over the same period, with Cortland the most 
-significant outlier — rates nearly doubled from 36 to 62 per 10,000 
+significant outlier  -  rates nearly doubled from 36 to 62 per 10,000 
 while the rest of the state improved. This warrants targeted 
 investigation and intervention.
 
@@ -268,33 +268,33 @@ GROUP BY subgroup_cat2;
 | Female | 394 |
 
 Males have slightly higher rates than females (423 vs 394 per 
-10,000). The difference is consistent but modest — gender alone is 
+10,000). The difference is consistent but modest  -  gender alone is 
 not a major driver of asthma burden in this dataset.
 
 ### Recommendations
 
-1. **Target the Bronx specifically** — despite significant 
+1. **Target the Bronx specifically**  -  despite significant 
    improvement over the analysis period, it still carries nearly 
    3x the statewide average burden. Continued targeted intervention 
    is needed.
 
-2. **Prioritise early childhood programs** — the 0–4 age group 
+2. **Prioritise early childhood programs**  -  the 0–4 age group 
    burden is dramatically higher than any other group. Community 
    health programs targeting young children and their environments 
    (home allergens, air quality) would have the highest population 
    impact.
 
-3. **Prepare healthcare systems for seasonal surges** — May and 
+3. **Prepare healthcare systems for seasonal surges**  -  May and 
    October consistently show peak demand. Scaling staffing, 
    medication supply, and community outreach ahead of these months 
    would reduce preventable ED visits.
 
-4. **Investigate Cortland County urgently** — the only county where 
+4. **Investigate Cortland County urgently**  -  the only county where 
    rates nearly doubled while the state improved. Understanding 
    whether this is driven by environmental, demographic, or 
    healthcare access factors is critical for targeted policy response.
 
-5. **Scale what's working** — Greene and Clinton Counties achieved 
+5. **Scale what's working**  -  Greene and Clinton Counties achieved 
    67–68% reductions. Understanding and replicating the conditions 
    that drove their improvement across other high-burden counties 
    should be a policy priority.
@@ -302,13 +302,13 @@ not a major driver of asthma burden in this dataset.
 ### Dashboard
 Two-page Power BI dashboard:
 
-**Page 1 — Overview**
+**Page 1  -  Overview**
 - 3 KPI cards: Peak Year Rate, Avg Statewide Rate, Most Recent Year Rate
 - Line chart: Statewide ED Visit Rate Trend (2005–2019)
 - Horizontal bar: Top 10 Counties by Average ED Visit Rate
 - Horizontal bar: Most Improved Counties % (2005–2007 vs 2017–2019)
 
-**Page 2 — Demographics (Who Is Most Affected?)**
+**Page 2  -  Demographics (Who Is Most Affected?)**
 - Bar chart: ED Visit Rate by Age Group
 - Bar chart: Seasonal Pattern by Month
 - Bar chart: ED Visit Rate by Gender
@@ -317,8 +317,8 @@ Two-page Power BI dashboard:
 ![Demographics Page](ny-asthma-dashboard-demographics.png)
 
 ### Tools Used
-- **SQL Server (T-SQL)** — data loading, cleaning, and analysis
-- **Power BI** — two-page interactive dashboard
+- **SQL Server (T-SQL)**  -  data loading, cleaning, and analysis
+- **Power BI**  -  two-page interactive dashboard
 
 ### SQL Skills Demonstrated
 - Filtering complex stacked datasets with multiple WHERE conditions
@@ -330,8 +330,8 @@ Two-page Power BI dashboard:
 - Distinguishing between crude rate and age-adjusted rate
 
 ### Files
-- `asthma_analysis.sql` — all analysis queries with comments and findings
-- Power BI dashboard (.pbix) — available on request
+- `asthma_analysis.sql`  -  all analysis queries with comments and findings
+- Power BI dashboard (.pbix)  -  available on request
 
 ---
 *Data sourced from New York State Department of Health. Analysis is 
